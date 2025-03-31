@@ -1,0 +1,172 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;  /* Soft background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffa500;  /* Soft Orange */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.toggle-profile-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: none;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+/* Profil */
+.profile {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    color: #ff6600;  /* Muted Orange */
+    margin-top: 10px;
+}
+
+.profile p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Profile Close */
+.profile.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Button Toggle Profil */
+.profile-toggle-btn {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 34px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-toggle-btn:hover {
+    background-color: transparent;
+    transform: scale(1.2);
+}
+.toggle-profile-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.toggle-profile-btn.show {
+    display: block;
+}
+
+/* Form Section */
+#daftar-mahasiswa {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    width: 100%;
+}
+
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button styling */
+form button {
+    background-color: #ffcc00;  /* Soft Yellow */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #f7a800;  /* Darker Yellow */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    #daftar-mahasiswa {
+        width: 90%;
+    }
+}
+.textarea-large {
+    width: 100%;
+    height: 120px; 
+    resize: vertical; 
+  }  

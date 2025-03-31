@@ -1,0 +1,171 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #fbc02d,#e2cf60, #f57f17); /* Gradasi yang lebih lembut dan hangat */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: linear-gradient(135deg, #f57f17, #fbc02d, #e2cf60); /* Gradasi yang lebih lembut saat hover */
+    color: white;
+}
+
+/* Dashboard and Form */
+#dashboard, #register {
+    padding: 20px;
+    margin: 0 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#dashboard h2, #register h2 {
+    font-size: 1.8rem;
+    color: #f57f17; /* Oranye lebih lembut */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#dashboard p, #register p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+ol {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+    background-color: white;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background: linear-gradient(135deg, #fbc02d, #f57f17); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 12px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #f57f17, #fbc02d); 
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #dashboard, #register {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    form {
+        margin: 10px;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Logo Position */
+header .logo {
+    position: absolute;
+    top: 26px;
+    left: 15px;
+    width: 60px;
+    height: auto;
+    background-color: transparent;
+}
