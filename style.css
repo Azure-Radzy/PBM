@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;  /* Soft background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     color: #333;
@@ -10,15 +10,18 @@ body {
     min-height: 100vh;
 }
 
+/* Header */
 header {
-    background-color: #ffa500;  /* Soft Orange */
+    background-color: #ffa500;
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
 .toggle-profile-btn {
@@ -33,22 +36,25 @@ header h1 {
     display: none;
 }
 
-/* Container */
-.container {
+.toggle-profile-btn.show {
+    display: block;
+}
+
+/* Main Layout */
+.main-container {
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    gap: 20px;
+    padding: 20px;
     flex-wrap: wrap;
 }
 
-/* Profil */
+/* Profile Sidebar */
 .profile {
     flex: 1;
     background-color: #ffffff;
     padding: 20px;
-    margin-right: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -58,61 +64,107 @@ header h1 {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .profile h2 {
-    color: #ff6600;  /* Muted Orange */
+    color: #ff6600;
     margin-top: 10px;
+    font-size: 1.2rem;
 }
 
 .profile p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
+    margin: 5px 0;
 }
 
-/* Profile Close */
 .profile.hidden {
     transform: translateX(-100%);
     opacity: 0;
 }
 
-/* Button Toggle Profil */
+/* Profile Toggle Button */
 .profile-toggle-btn {
     background-color: transparent;
     color: #333;
     border: none;
-    padding: 10px;
-    font-size: 1rem;
+    font-size: 34px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 34px;
-    padding: 10px;
     transition: transform 0.3s ease;
+    padding: 10px;
 }
 
 .profile-toggle-btn:hover {
-    background-color: transparent;
     transform: scale(1.2);
 }
-.toggle-profile-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
+.form-nav-buttons {
+    margin-top: 20px;
 }
 
-.toggle-profile-btn.show {
+.form-nav-buttons button {
     display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Form Section */
-#daftar-mahasiswa {
+.form-nav-buttons button:hover {
+    background-color: #ff8700;
+    transform: translateX(5px);
+}
+
+
+/* Navigation Button Section */
+.navigation-buttons {
     flex: 2;
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+    width: 100%;
+}
+
+.navigation-buttons h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.navigation-buttons button {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #ff8700;
+}
+
+/* Form Styling (for inner steps) */
+#daftar-mahasiswa {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -121,52 +173,62 @@ form {
     width: 100%;
 }
 
-
 form label {
     display: block;
     margin-top: 10px;
+    font-weight: 500;
 }
 
-form input, form select, form button {
+form input, form select, form button, form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
-/* Button styling */
 form button {
-    background-color: #ffcc00;  /* Soft Yellow */
+    background-color: #ffcc00;
     color: white;
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #f7a800;  /* Darker Yellow */
+    background-color: #f7a800;
+}
+
+/* Textarea khusus */
+.textarea-large {
+    width: 100%;
+    height: 120px;
+    resize: vertical;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .container {
+    .main-container {
         flex-direction: column;
         align-items: center;
     }
 
     .profile {
-        margin-right: 0;
         margin-bottom: 20px;
-        max-width: 100%;
+        max-width: 90%;
+    }
+
+    .navigation-buttons {
+        width: 100%;
     }
 
     #daftar-mahasiswa {
         width: 90%;
     }
+
+    .toggle-profile-btn {
+        display: block;
+    }
 }
-.textarea-large {
-    width: 100%;
-    height: 120px; 
-    resize: vertical; 
-  }  

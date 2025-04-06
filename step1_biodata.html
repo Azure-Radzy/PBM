@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biodata Pendaftar</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script_daftar.js"></script>
+
+</head>
+<body>
+    <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+
+    <form id="form-pendaftaran" action="/submit-registration" method="POST" enctype="multipart/form-data">
+      <div id="step-1">
+        <h3>Data Diri</h3>
+        <label for="nama_lengkap">Nama Lengkap:</label>
+        <input type="text" id="nama_lengkap" name="nama_lengkap" required>
+
+        <label for="nisn">NISN:</label>
+        <input type="text" id="nisn" name="nisn" required>
+
+        <label for="agama">Agama:</label>
+        <input type="text" id="agama" name="agama" required>
+
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <select id="jenis_kelamin" name="jenis_kelamin" required>
+          <option value="L">Laki-laki</option>
+          <option value="P">Perempuan</option>
+        </select>
+
+        <label for="alamat">Alamat:</label>
+        <input type="text" id="alamat" name="alamat" required>
+
+        <label for="no_hp">No. HP:</label>
+        <input type="text" id="no_hp" name="no_hp" required>
+
+        <label for="no_kk">No. KK:</label>
+        <input type="text" id="no_kk" name="no_kk" required>
+
+        <label for="no_ktp">No. KTP:</label>
+        <input type="text" id="no_ktp" name="no_ktp" required>
+
+        <label for="jurusan">Jurusan Pilihan:</label>
+        <select id="jurusan" name="jurusan" required>
+          <option value="pendidikan_agama_hindu">Pendidikan Agama Hindu</option>
+          <option value="pendidikan_olahraga">Pendidikan Olahraga dan Kesehatan</option>
+          <option value="pendidikan_bahasa_inggris">Pendidikan Bahasa Inggris</option>
+          <option value="ilmu_komunikasi_hindu">Ilmu Komunikasi Hindu</option>
+        </select>
+
+        <label for="pendidikan_terakhir">Pendidikan Terakhir:</label>
+        <input type="text" id="pendidikan_terakhir" name="pendidikan_terakhir" required>
+
+        <label for="jurusan_terakhir">Jurusan Pendidikan Terakhir:</label>
+        <input type="text" id="jurusan_terakhir" name="jurusan_terakhir" required>
+
+        <label for="pas-poto">upload Foto 4X6:</label>
+        <input type="file" id="pas-poto" name="pas-poto" required>
+        <button>simpan data</button>
+</body>
+</html>

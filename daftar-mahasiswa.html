@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pendaftaran Mahasiswa Baru - STKIP Agama Hindu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script_daftar.js"></script>
+  <script defer src="script_daftars.js"></script>
 </head>
 <body>
   <header>
@@ -13,183 +14,49 @@
     <button class="toggle-profile-btn" id="toggleProfileBtn">➤</button>
   </header>
 
-  <div class="container">
+  <!-- Bungkus dengan main-container -->
+  <div class="main-container">
     <div class="profile" id="profile">
-        <img src="assets/image.png" alt="Foto Profil">
-        <h2>Nama Pengguna</h2>
-        <p>Email: user@example.com</p>
-        <p>Nomor HP: 1234567890</p>
-        <p>Alamat: Jl. Contoh No. 123</p>
+      <img src="assets/image.png" alt="Foto Profil" />
+      <h2>Nama Pengguna</h2>
+      <p>Email: user@example.com</p>
+      <p>Nomor HP: 1234567890</p>
+      <p>Alamat: Jl. Contoh No. 123</p>
+
+      <div class="form-nav-buttons">
+        <button onclick="loadStep('step1_biodata.html')">📝 Biodata Pendaftar</button>
+        <button onclick="loadStep('step2_orangtua.html')">👨‍👩‍👧‍👦 Biodata Orang Tua</button>
+        <button onclick="loadStep('step3_stkip.html')">🏫 Data Seputar STKIP</button>
+        <button onclick="loadStep('step4_dokumen.html')">📎 Upload Dokumen</button>
+        <button type="submit">Daftar</button>
         <button class="profile-toggle-btn" id="toggleProfileBtn2">⇦</button>
+
+      </div>
     </div>
 
-    <section id="daftar-mahasiswa">
-      <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+    <!-- Konten form berada di kanan -->
+    <div id="form-content">
+      <p>Silakan pilih salah satu langkah pendaftaran di samping.</p>
+    </div>
+  </div>
 
-      <form id="form-pendaftaran" action="/submit-registration" method="POST" enctype="multipart/form-data">
-        <div id="step-1">
-          <h3>Data Diri</h3>
-          <label for="nama_lengkap">Nama Lengkap:</label>
-          <input type="text" id="nama_lengkap" name="nama_lengkap" required>
-
-          <label for="nisn">NISN:</label>
-          <input type="text" id="nisn" name="nisn" required>
-
-          <label for="agama">Agama:</label>
-          <input type="text" id="agama" name="agama" required>
-
-          <label for="jenis_kelamin">Jenis Kelamin:</label>
-          <select id="jenis_kelamin" name="jenis_kelamin" required>
-            <option value="L">Laki-laki</option>
-            <option value="P">Perempuan</option>
-          </select>
-
-          <label for="alamat">Alamat:</label>
-          <input type="text" id="alamat" name="alamat" required>
-
-          <label for="no_hp">No. HP:</label>
-          <input type="text" id="no_hp" name="no_hp" required>
-
-          <label for="no_kk">No. KK:</label>
-          <input type="text" id="no_kk" name="no_kk" required>
-
-          <label for="no_ktp">No. KTP:</label>
-          <input type="text" id="no_ktp" name="no_ktp" required>
-
-          <label for="jurusan">Jurusan Pilihan:</label>
-          <select id="jurusan" name="jurusan" required>
-            <option value="pendidikan_agama_hindu">Pendidikan Agama Hindu</option>
-            <option value="pendidikan_olahraga">Pendidikan Olahraga dan Kesehatan</option>
-            <option value="pendidikan_bahasa_inggris">Pendidikan Bahasa Inggris</option>
-            <option value="ilmu_komunikasi_hindu">Ilmu Komunikasi Hindu</option>
-          </select>
-
-          <label for="pendidikan_terakhir">Pendidikan Terakhir:</label>
-          <input type="text" id="pendidikan_terakhir" name="pendidikan_terakhir" required>
-
-          <label for="jurusan_terakhir">Jurusan Pendidikan Terakhir:</label>
-          <input type="text" id="jurusan_terakhir" name="jurusan_terakhir" required>
-
-          <label for="pas-poto">upload Foto 4X6:</label>
-          <input type="file" id="pas-poto" name="pas-poto" required>
-
-          <button type="button" id="next-1">Next</button>
-        </div>
-
-      <div id="step-2"style="display:none;">
-        <h3>Data Orang Tua / Wali</h3>
-        
-        <label for="tinggal_bersama">Tinggal Bersama:</label>
-        <select id="tinggal_bersama" name="tinggal_bersama" required>
-        <option value="" disabled selected>Pilih Salah Satu</option>
-        <option value="orang_tua">Orang Tua</option>
-        <option value="wali">Wali</option>
-        </select>
-
-        <div id="data-ayah">
-          <label for="nama_ayah">Nama Ayah:</label>
-          <input type="text" id="nama_ayah" name="nama_ayah" required>
-
-          <label for="pekerjaan_ayah">Pekerjaan Ayah:</label>
-          <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah" required>
-
-          <label for="alamat_ayah">Alamat Ayah:</label>
-          <input type="text" id="alamat_ayah" name="alamat_ayah" required>
-
-          <label for="no_hp_ayah">No. HP Ayah:</label>
-          <input type="text" id="no_hp_ayah" name="no_hp_ayah" required>
-
-          <label for="penghasilan_ayah">Penghasilan Ayah:</label>
-          <input type="text" id="penghasilan_ayah" name="penghasilan_ayah" required>
-        </div>
-
-        <div id="data-ibu">
-          <label for="nama_ibu">Nama Ibu:</label>
-          <input type="text" id="nama_ibu" name="nama_ibu" required>
-
-          <label for="pekerjaan_ibu">Pekerjaan Ibu:</label>
-          <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu" required>
-
-          <label for="alamat_ibu">Alamat Ibu:</label>
-          <input type="text" id="alamat_ibu" name="alamat_ibu" required>
-
-          <label for="no_hp_ibu">No. HP Ibu:</label>
-          <input type="text" id="no_hp_ibu" name="no_hp_ibu" required>
-
-          <label for="penghasilan_ibu">Penghasilan Ibu:</label>
-          <input type="text" id="penghasilan_ibu" name="penghasilan_ibu" required>
-        </div>
-
-        <div id="data-wali">
-            <label for="nama_wali">Nama Wali:</label>
-            <small>Contoh: Siti Jubaidah (Nenek)</small>
-            <input type="text" id="nama_wali" name="nama_wali" required>
-            
-            <label for="pekerjaan_wali">Pekerjaan Wali:</label>
-            <input type="text" id="pekerjaan_wali" name="pekerjaan_wali" required>
-
-            <label for="alamat_wali">Alamat Wali:</label>
-            <input type="text" id="alamat_wali" name="alamat_wali" required>
-
-            <label for="no_hp_wali">No. HP Wali:</label>
-            <input type="text" id="no_hp_wali" name="no_hp_wali" required>
-
-            <label for="penghasilan_wali">Penghasilan Wali:</label>
-            <input type="text" id="penghasilan_wali" name="penghasilan_wali" required>
-        </div>
-
-        <button type="button" id="next-2">Next</button>
-      </div>
-
-      <div id="step-3" style="display:none;">
-        <h3>Seputar STKIP</h3>
-        <label for="jenis_pendaftaran">Jenis Pendaftaran:</label>
-        <select id="jenis_pendaftaran" name="jenis_pendaftaran" required>
-          <option value="baru">Umum</option>
-          <option value="baru">Undangan</option>
-          <option value="pindahan">Pindahan</option>
-        </select>
-
-        <label for="jalur_pendaftaran">Jalur Pendaftaran:</label>
-        <select id="jalur_pendaftaran" name="jalur_pendaftaran" required>
-          <option value="zonasi">Zonasi</option>
-          <option value="kurang_mampu">Kurang Mampu</option>
-          <option value="prestasi">Prestasi</option>
-        </select>
-        <label for="tentang_STKIP">Mengeetahui STKIP Dari:</label>
-        <input type="text" id="tentang_STKIP" name="tentang_STKIP" required>
-        <label for="alasan">Mengapa Anda Memilih STKIP?</label>
-        <textarea id="alasan" name="alasan" rows="5" class="textarea-large" required></textarea>
-        <button type="button" id="next-3">Next</button>
-      </div>
-
-    <div id="step-4" style="display:none;">
-    <h3>Upload Dokumen</h3>
-    
-    <label for="ijasah">Scan Ijazah:</label>
-    <input type="file" id="ijasah" name="ijasah" required>
-
-    <label for="surat_keterangan">Surat Keterangan Tidak Mampu (Jika Jalur Kurang Mampu):</label>
-    <input type="file" id="surat_keterangan" name="surat_keterangan">
-
-    <label for="sertifikat">Sertifikat Prestasi (Jika Jalur Prestasi):</label>
-    <input type="file" id="sertifikat" name="sertifikat">
-
-    <label for="raport">Kartu Hasil Studi (KHS)/Kartu Pelajar Mahasiswa (Untuk Pindahan):</label>
-    <input type="file" id="raport" name="raport">
-
-    <label for="Transfer">Bukti Pembayaran ke:173001002879534(STKIP Agama Hindu Singaraja)</label>
-    <input type="file" id="Transfer" name="Transfer">
-
-    <p> DOWNLOAD SURAT PERNYATAAN KEMUDIAN UPLOAD KEMBALI</p>
-    <a href="files/surat_pernyataan.pdf" download="Surat_Pernyataan.pdf">Download Surat Pernyataan</a> <br><br>
-
-    <label for="surat_pernyataan">Upload Surat Pernyataan:</label>
-    <input type="file" id="surat_pernyataan" name="surat_pernyataan">
-
-        <button type="submit">Daftar</button>
-      </div>
-    </form>
-  </section>
+  <script>
+    function loadStep(filename) {
+      fetch(filename)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Gagal memuat file: ' + filename);
+          }
+          return response.text();
+        })
+        .then(html => {
+          document.getElementById('form-content').innerHTML = html;
+        })
+        .catch(error => {
+          document.getElementById('form-content').innerHTML = '<p style="color:red;">Terjadi kesalahan saat memuat konten.</p>';
+          console.error(error);
+        });
+    }
+  </script>
 </body>
 </html>

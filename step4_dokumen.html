@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Upload Dokumen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script_daftar.js"></script>
+
+</head>
+<body>
+    <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+<h3>Upload Dokumen</h3>
+<form id="form-pendaftaran" action="/submit-registration" method="POST" enctype="multipart/form-data">
+
+<label for="ijasah">Scan Ijazah:</label>
+<input type="file" id="ijasah" name="ijasah" required>
+
+<label for="surat_keterangan">Surat Keterangan Tidak Mampu (Jika Jalur Kurang Mampu):</label>
+<input type="file" id="surat_keterangan" name="surat_keterangan">
+
+<label for="sertifikat">Sertifikat Prestasi (Jika Jalur Prestasi):</label>
+<input type="file" id="sertifikat" name="sertifikat">
+
+<label for="raport">Kartu Hasil Studi (KHS)/Kartu Pelajar Mahasiswa (Untuk Pindahan):</label>
+<input type="file" id="raport" name="raport">
+
+<label for="Transfer">Bukti Pembayaran ke:173001002879534(STKIP Agama Hindu Singaraja)</label>
+<input type="file" id="Transfer" name="Transfer">
+
+<p> DOWNLOAD SURAT PERNYATAAN KEMUDIAN UPLOAD KEMBALI</p>
+<a href="files/surat_pernyataan.pdf" download="Surat_Pernyataan.pdf">Download Surat Pernyataan</a> <br><br>
+
+<label for="surat_pernyataan">Upload Surat Pernyataan:</label>
+<input type="file" id="surat_pernyataan" name="surat_pernyataan">
+
+<button>simpan data</button>
+</div>
+</form>
+</section>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>STKIP</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script_daftar.js"></script>
+  <script defer src="script_daftars.js"></script>
+</head>
+<body>
+<div >
+    <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+
+    <h3>Seputar STKIP</h3>
+    <form id="form-pendaftaran" action="/submit-registration" method="POST" enctype="multipart/form-data">
+    <label for="jenis_pendaftaran">Jenis Pendaftaran:</label>
+    <select id="jenis_pendaftaran" name="jenis_pendaftaran" required>
+      <option value="baru">Umum</option>
+      <option value="undangan">Undangan</option>
+    </select>
+
+    <label for="jalur_pendaftaran">Jalur Pendaftaran:</label>
+    <select id="jalur_pendaftaran" name="jalur_pendaftaran" required>
+      <option value="zonasi">Zonasi</option>
+      <option value="kurang_mampu">Kurang Mampu</option>
+      <option value="prestasi">Prestasi</option>
+    </select>
+    <label for="tentang_STKIP">Mengeetahui STKIP Dari:</label>
+    <input type="text" id="tentang_STKIP" name="tentang_STKIP" required>
+    <label for="alasan">Mengapa Anda Memilih STKIP?</label>
+    <textarea id="alasan" name="alasan" rows="5" class="textarea-large" required></textarea>
+    <button>simpan data</button>
+    </form>
+</div>
+  </body>
+  </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biodata Orang tua</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script_daftars.js"></script>
+
+</head>
+<body>
+ <h2>Formulir Pendaftaran Mahasiswa Baru</h2>
+
+<h3>Data Orang Tua / Wali</h3>
+<form id="form-pendaftaran" action="/submit-registration" method="POST" enctype="multipart/form-data">
+<label for="tinggal_bersama">Tinggal Bersama:</label>
+<select id="tinggal_bersama" name="tinggal_bersama" required>
+<option value="" disabled selected>Pilih Salah Satu</option>
+<option value="orang_tua">Orang Tua</option>
+<option value="wali">Wali</option>
+</select>
+
+<div id="data-ayah">
+  <label for="nama_ayah">Nama Ayah:</label>
+  <input type="text" id="nama_ayah" name="nama_ayah" required>
+
+  <label for="pekerjaan_ayah">Pekerjaan Ayah:</label>
+  <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah" required>
+
+  <label for="alamat_ayah">Alamat Ayah:</label>
+  <input type="text" id="alamat_ayah" name="alamat_ayah" required>
+
+  <label for="no_hp_ayah">No. HP Ayah:</label>
+  <input type="text" id="no_hp_ayah" name="no_hp_ayah" required>
+
+  <label for="penghasilan_ayah">Penghasilan Ayah:</label>
+  <input type="text" id="penghasilan_ayah" name="penghasilan_ayah" required>
+</div>
+
+<div id="data-ibu">
+  <label for="nama_ibu">Nama Ibu:</label>
+  <input type="text" id="nama_ibu" name="nama_ibu" required>
+
+  <label for="pekerjaan_ibu">Pekerjaan Ibu:</label>
+  <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu" required>
+
+  <label for="alamat_ibu">Alamat Ibu:</label>
+  <input type="text" id="alamat_ibu" name="alamat_ibu" required>
+
+  <label for="no_hp_ibu">No. HP Ibu:</label>
+  <input type="text" id="no_hp_ibu" name="no_hp_ibu" required>
+
+  <label for="penghasilan_ibu">Penghasilan Ibu:</label>
+  <input type="text" id="penghasilan_ibu" name="penghasilan_ibu" required>
+</div>
+
+<div id="data-wali">
+    <label for="nama_wali">Nama Wali:</label>
+    <small>Contoh: Siti Jubaidah (Nenek)</small>
+    <input type="text" id="nama_wali" name="nama_wali" required>
+    
+    <label for="pekerjaan_wali">Pekerjaan Wali:</label>
+    <input type="text" id="pekerjaan_wali" name="pekerjaan_wali" required>
+
+    <label for="alamat_wali">Alamat Wali:</label>
+    <input type="text" id="alamat_wali" name="alamat_wali" required>
+
+    <label for="no_hp_wali">No. HP Wali:</label>
+    <input type="text" id="no_hp_wali" name="no_hp_wali" required>
+
+    <label for="penghasilan_wali">Penghasilan Wali:</label>
+    <input type="text" id="penghasilan_wali" name="penghasilan_wali" required>
+    <button>simpan data</button>
+</div>
+</form>
+</body>
+</html>
